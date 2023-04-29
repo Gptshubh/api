@@ -33,8 +33,11 @@ def giveEmotion(frame):
 
 
 app = Flask(__name__)
-
 @app.route('/')
+def front():
+    return '<p>hello</p>'
+
+@app.route('/endpoint')
 def process_video():
     cap=cv2.VideoCapture(r'C:\Users\subha\Pictures\Camera Roll\WIN_20230429_19_18_48_Pro.mp4')
 
